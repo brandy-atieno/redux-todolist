@@ -8,7 +8,9 @@ const dispatch=useDispatch();
 		event.preventDefault();
 		dispatch(addTodo({
 			title:value
-		}))
+		})
+		)
+		setValue('')
  	};
 
 	return (
