@@ -1,13 +1,13 @@
 import React from "react";
-import { toggleComplete,deleteTodo } from "../redux/todoSlice";
+import { toggleCompletedTodoAsync,deleteTodoAsync } from "../redux/todoSlice";
 import { useDispatch } from "react-redux";
 const TodoItem = ({ id, title, completed }) => {
   const dispatch = useDispatch();
   const handleCheckBox = () => {
-    dispatch(toggleComplete({ id: id, completed: !completed }));
+    dispatch(toggleCompletedTodoAsync({ id: id, completed: !completed }));
   };
   const handleDelete=()=>{
-	dispatch(deleteTodo({
+	dispatch(deleteTodoAsync({
 		id:id
 	}))
   }
